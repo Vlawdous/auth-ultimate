@@ -6,7 +6,10 @@ RUN apt-get update && apt-get install -y \
     zlib1g-dev \
     libmcrypt-dev \
     libzip-dev \
-    openssl
+    openssl \
+    unzip
+
+RUN docker-php-ext-install zip
 
 RUN docker-php-ext-install pdo pdo_mysql
 
